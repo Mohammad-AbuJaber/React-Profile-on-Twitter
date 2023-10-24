@@ -151,3 +151,56 @@
 .follow-button:hover {
     background-color: #e6e6e6;
 }
+
+.trends {
+    display: flex;
+    flex-direction: column;
+    background-color: #202327;
+    border-radius: 0.3125rem;
+    margin-top: 0.5rem;
+    width: 18rem;
+    padding: 0.5rem;
+}
+
+.category {
+    margin-left: 0.5rem;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    color: #5a5e63;
+    background-color: transparent;
+}
+
+.ellipsis-icon {
+    color: #5a5e63;
+    background-color: transparent;
+    transform: translateY(0.5rem);
+}
+
+.ellipsis-icon:hover {
+    color: #1d9bf0;
+    cursor: pointer;
+}
+
+.category-title, .posts {
+    color: #5a5e63;
+    font-size: 0.8rem;
+    background-color: transparent;
+}
+
+.topics {
+    margin-left: 0.5rem;
+    display: block;
+    background-color: transparent;
+}
+
+.topics-title {
+    color: #fff;
+    font-size: 0.8rem;
+    background-color: transparent;
+}
+
+.topics-title:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
