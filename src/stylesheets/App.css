@@ -1,0 +1,12 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: #000000;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.main-container {
+    display: grid;
+    grid-template-columns: 0.3fr 0.33fr 0.33fr;
+}
