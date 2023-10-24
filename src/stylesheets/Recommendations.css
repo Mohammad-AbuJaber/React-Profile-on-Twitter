@@ -72,3 +72,82 @@
 .showMore-button:hover {
     color: #5cabe0;
 }
+
+.page {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border-radius: 0.3125rem;
+    margin-bottom: 0.5rem;
+    margin-left: 0.5rem;
+    margin-top: 1rem;
+    width: 95%;
+    height: 3rem;
+    padding-left: 0;
+}
+
+.avatar {
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    margin-right: 0.625rem;
+    background-color: transparent;
+}
+
+.avatar img {
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-color: transparent;
+}
+
+.info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+}
+
+.name {
+    font-weight: bold;
+    background-color: transparent;
+    font-size: 0.9rem;
+}
+
+.name:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.verified-badge {
+    color: #1d9bf0;
+    font-size: 1rem;
+    margin-left: 0.03rem;
+    background-color: transparent;
+}
+
+.username {
+    color: #5a5e63;
+    font-size: 0.8rem;
+    background-color: transparent;
+}
+
+.follow-button {
+    background-color: #fff;
+    font-size: 0.9rem;
+    color: #000;
+    border: none;
+    border-radius: 1rem;
+    padding: 0.7rem 0.7rem;
+    cursor: pointer;
+    height: 1.9rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.follow-button:hover {
+    background-color: #e6e6e6;
+}
