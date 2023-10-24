@@ -16,10 +16,22 @@ function SearchBar() {
     );
 }
 
+function Card(props) {
+    return (
+        <div className="card">
+            <h2 className="card-title">{props.title}</h2>
+            {props.children}
+            <button className="showMore-button">Show more</button>
+        </div>
+    );
+}
+
 export default function Recommendations() {
     return (
         <div className="recommendations">
             <SearchBar/>
+            <Card title="You might like">
+            </Card>
         </div>
     );
 }
