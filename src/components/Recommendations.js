@@ -63,6 +63,25 @@ function Trends(props) {
     );
 }
 
+function Footer() {
+    const currentYear = new Date().getFullYear();
+
+    return (
+        <div className="footer">
+            <span className="footer-link" role="link">Terms of Service </span>
+            <span className="footer-link" role="link">Privacy Policy </span>
+            <span className="footer-link" role="link">Cookie Policy </span>
+            <span className="footer-link" role="link">Accessibility </span>
+            <span className="footer-link" role="link">Ads info </span>
+            <span className="footer-link" role="link">
+                More {" "}
+                <FontAwesomeIcon icon={faEllipsisH}/>
+            </span>
+            <span> @{currentYear} X Corp.</span>
+        </div>
+    );
+}
+
 export default function Recommendations() {
     return (
         <div className="recommendations">
@@ -113,8 +132,8 @@ export default function Recommendations() {
                     topic="#Messi"
                     posts={90000}
                 />
-
             </Card>
+            <Footer/>
         </div>
     );
 }
