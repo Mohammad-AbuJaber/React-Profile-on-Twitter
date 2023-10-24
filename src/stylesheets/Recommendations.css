@@ -204,3 +204,17 @@
     text-decoration: underline;
     cursor: pointer;
 }
+
+.footer {
+    color: #5a5e63;
+    text-align: center;
+    padding: 1rem 0;
+    width: 20rem;
+    margin-left: 2rem;
+    font-size: 0.9rem;
+}
+
+.footer-link:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
