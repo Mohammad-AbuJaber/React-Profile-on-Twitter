@@ -259,3 +259,58 @@
 .profile-tab.active::before {
     background-color: #1da1f2;
 }
+
+.profile-user {
+    color: #71767b;
+}
+
+.page-to-follow-title {
+    font-size: 1.3rem;
+    font-weight: bold;
+    padding-top: 0.7rem;
+    padding-left: 1rem;
+    padding-bottom: 0.5rem;
+    background-color: transparent;
+}
+
+.page-to-follow {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border-bottom: 1px solid #2f3336;
+    background-color: transparent;
+}
+
+.page-to-follow-item:hover {
+    background-color: #181818;
+    cursor: pointer;
+}
+
+.page-to-follow-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0.5rem;
+    background-color: transparent;
+}
+
+.followers-user-names {
+    padding-left: 1.7rem;
+    transform: translateY(100%);
+    background-color: transparent;
+}
+
+.followers-user-username, .profile-user {
+    color: #5a5e63;
+    font-size: 0.8rem;
+    font-weight: bold;
+    padding-right: 0.5rem;
+    background-color: transparent;
+}
+
+.page-description {
+    font-size: 0.9rem;
+    padding-left: 1.7rem;
+    font-weight: bold;
+    background-color: transparent;
+}
