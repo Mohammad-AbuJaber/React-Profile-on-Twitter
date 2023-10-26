@@ -1,7 +1,8 @@
 import React, {useState} from "react";
 import '../stylesheets/Main.css';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {faArrowLeft, faEllipsisH, faCalendarDays, faBell, faLink} from '@fortawesome/free-solid-svg-icons';
+import {faArrowLeft, faEllipsisH, faCalendarDays, faBell, faLink, faUser} from '@fortawesome/free-solid-svg-icons';
+import {Page} from "./Recommendations";
 
 function VisitedPage(props) {
     const formattedPosts = props.posts.toLocaleString();
@@ -127,7 +128,60 @@ function ProfileTabs(props) {
     );
 }
 
+function PageToFollow(props) {
+    return (
+        <div className="page-to-follow">
+            <h2 className="page-to-follow-title">Who to follow</h2>
+            {props.pages.map((page, index) => (
+                <div key={index} className="page-to-follow-item">
+                    <div className="followers-user-names">
+                        <FontAwesomeIcon icon={faUser} className="profile-user"/>
+                        <span className="followers-user-username">{page.followers}</span>
+                    </div>
+                    <Page
+                        avatarUrl={page.avatarUrl}
+                        name={page.name}
+                        username={page.username}
+                        isVerified={page.isVerified}
+                    />
+                    <div className="page-description">
+                        <p className="page-description">{page.description}</p>
+                    </div>
+                </div>
+            ))}
+            <button className="showMore-button">Show more</button>
+        </div>
+    );
+}
+
 export default function Main() {
+    const pagesToFollow = [
+        {
+            followers: "Node.js and 9 others",
+            name: "freeCodeCamp.org",
+            username: "freeCodeCamp",
+            avatarUrl: "https://pbs.twimg.com/profile_images/1276770212927410176/qTgTIejk_400x400.jpg",
+            isVerified: true,
+            description: "We're a community of millions of people who are building new skills and getting new jobs together. A 501(c)(3) public charity."
+        },
+        {
+            followers: "Node.js and 5 others",
+            name: "TypeScript",
+            username: "typescript",
+            avatarUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/768px-Typescript_logo_2020.svg.png",
+            isVerified: true,
+            description: "TypeScript is a language for application-scale JavaScript development. " +
+                "It's a typed superset of JavaScript that compiles to plain JavaScript."
+        },
+        {
+            followers: "Node.js and 3 others",
+            name: "Tailwind CSS",
+            username: "tailwindcss",
+            avatarUrl: "https://asset.brandfetch.io/idKJ12s-EY/idI9erPtdw.jpeg",
+            isVerified: true,
+            description: "The utility-first CSS framework. Rapidly build modern websites, without ever leaving your HTML."
+        }
+    ];
     return (
         <div className="main">
             <VisitedPage name="React" posts={2611}/>
@@ -166,6 +220,7 @@ export default function Main() {
                 ]}
             />
             <ProfileTabs/>
+            <PageToFollow pages={pagesToFollow}/>
         </div>
     );
 }
