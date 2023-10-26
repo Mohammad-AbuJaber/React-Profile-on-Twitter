@@ -215,3 +215,47 @@
     display: inline-flex;
     margin-right: 1.5rem;
 }
+
+.profile-tabs {
+    display: flex;
+    background-color: #fff;
+    overflow: hidden;
+    margin-top: 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid #2f3336;
+}
+
+.profile-tab {
+    flex: 1;
+    text-align: center;
+    padding: 10px 0;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    color: #5a5e63;
+    font-weight: bold;
+    position: relative;
+}
+
+.profile-tab.active {
+    color: #fff;
+}
+
+.profile-tab:hover {
+    background-color: #181818;
+}
+
+.profile-tab::before {
+    content: '';
+    width: 33.3%;
+    height: 0.25rem;
+    background-color: transparent;
+    position: absolute;
+    bottom: 0;
+    left: 33.3%;
+    border-radius: 0.2rem;
+    transition: background-color 0.3s;
+}
+
+.profile-tab.active::before {
+    background-color: #1da1f2;
+}
