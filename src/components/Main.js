@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import '../stylesheets/Main.css';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faArrowLeft, faEllipsisH, faCalendarDays, faBell, faLink} from '@fortawesome/free-solid-svg-icons';
@@ -90,6 +90,43 @@ function Profile(props) {
     );
 }
 
+function ProfileTabs(props) {
+    const [activeTab, setActiveTab] = useState('Posts');
+
+    const handleTabClick = (tab) => {
+        setActiveTab(tab);
+    };
+
+    return (
+        <div className="profile-tabs">
+            <div
+                className={`profile-tab ${activeTab === 'Posts' ? 'active' : ''}`}
+                onClick={() => handleTabClick('Posts')}
+            >
+                Posts
+            </div>
+            <div
+                className={`profile-tab ${activeTab === 'Replies' ? 'active' : ''}`}
+                onClick={() => handleTabClick('Replies')}
+            >
+                Replies
+            </div>
+            <div
+                className={`profile-tab ${activeTab === 'Media' ? 'active' : ''}`}
+                onClick={() => handleTabClick('Media')}
+            >
+                Media
+            </div>
+            <div
+                className={`profile-tab ${activeTab === 'Likes' ? 'active' : ''}`}
+                onClick={() => handleTabClick('Likes')}
+            >
+                Likes
+            </div>
+        </div>
+    );
+}
+
 export default function Main() {
     return (
         <div className="main">
@@ -128,6 +165,7 @@ export default function Main() {
                     }
                 ]}
             />
+            <ProfileTabs/>
         </div>
     );
 }
