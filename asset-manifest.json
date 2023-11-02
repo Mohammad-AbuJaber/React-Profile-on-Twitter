@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/React-Profile-on-Twitter/static/css/main.57e6ecac.css",
+    "main.js": "/React-Profile-on-Twitter/static/js/main.3f26f296.js",
+    "index.html": "/React-Profile-on-Twitter/index.html",
+    "main.57e6ecac.css.map": "/React-Profile-on-Twitter/static/css/main.57e6ecac.css.map",
+    "main.3f26f296.js.map": "/React-Profile-on-Twitter/static/js/main.3f26f296.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.57e6ecac.css",
+    "static/js/main.3f26f296.js"
+  ]
+}
